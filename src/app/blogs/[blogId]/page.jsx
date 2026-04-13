@@ -1,3 +1,4 @@
+
 import React from 'react'
 
 async function BlogDetails({ params }) {
@@ -74,7 +75,7 @@ async function BlogDetails({ params }) {
     const { blogId } = await params;
 
     const findBlog = blogsData.find(blog => blog.id === parseInt(blogId));
-    console.log(findBlog)
+
 
     return (
         <div>
