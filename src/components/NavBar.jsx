@@ -18,6 +18,7 @@ function NavBar() {
                                 <li><Link href="/about">About</Link></li>
                                 <li><Link href="/contact">Contact</Link></li>
                                 <li><Link href="/developer">Developer</Link></li>
+                                <li><Link href="/blogs">Blogs</Link></li>
                             </ul>
                         </div>
                         <a className="btn btn-ghost text-xl">NextLerner</a>
@@ -28,6 +29,8 @@ function NavBar() {
                             <li><Link href="/about">About</Link></li>
                             <li><Link href="/contact">Contact</Link></li>
                             <li><Link href="/about/developer">Developer</Link></li>
+                            <li><Link href="/blogs">Blogs</Link></li>
+
 
                         </ul>
                     </div>
