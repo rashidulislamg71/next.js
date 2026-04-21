@@ -25,7 +25,7 @@ const Footer = () => {
 
                     {/* Brand Section */}
                     <div className="lg:col-span-2">
-                        <h2 className="text-white text-2xl font-bold mb-4">TechWave</h2>
+                        <h2 className="text-white text-2xl font-bold mb-4">NextLearner</h2>
                         <p className="mb-6 max-w-sm text-slate-400">
                             Building the next generation of web experiences with speed,
                             efficiency, and modern design principles.
