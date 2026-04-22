@@ -93,6 +93,13 @@ const blogData = [
     }
 ];
 
+
+export const metadata = {
+  title: 'blog',
+  description: "all the blog"
+}
+
+
 async function BlogDetail({ params }) {
 
     const { blogId } = await params;

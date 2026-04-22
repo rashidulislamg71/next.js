@@ -95,6 +95,12 @@ const blogData = [
     }
 ];
 
+
+export const metadata = {
+  title: 'My Blog',
+  description: "all the blog"
+}
+
 function Blogs() {
 
     return (
