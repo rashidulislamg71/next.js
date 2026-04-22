@@ -1,7 +1,13 @@
+"use client"
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import React from 'react'
-
 function NavBar() {
+
+    const pathName = usePathname();
+    const getActiveClass = (path) => {
+        return pathName === path ? "text-blue-600 font-bold" : "";
+    };
     return (
         <div>
             <nav className="bg-gray-800 text-white  p-4">
@@ -14,26 +20,26 @@ function NavBar() {
                             <ul
                                 tabIndex="-1"
                                 className="menu menu-sm dropdown-content bg-gray-700 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                                <li><Link href="/">Home</Link></li>
-                                <li><Link href="/about">About</Link></li>
-                                <li><Link href="/contact">Contact</Link></li>
-                                <li><Link href="/about/developer">Developer</Link></li>
-                                <li><Link href="/blogs">Blogs</Link></li>
-                                <li><Link href="/dashboard">Dashboard</Link></li>
-                                <li><Link href="/users">Users</Link></li>
+                                <li><Link className={getActiveClass("/")} href="/">Home</Link></li>
+                                <li><Link className={getActiveClass("/about")} href="/about">About</Link></li>
+                                <li><Link className={getActiveClass("/contact")} href="/contact">Contact</Link></li>
+                                <li><Link className={getActiveClass("/about/developer")} href="/about/developer">Developer</Link></li>
+                                <li><Link className={getActiveClass("/blogs")} href="/blogs">Blogs</Link></li>
+                                <li><Link className={getActiveClass("/dashboard")} href="/dashboard">Dashboard</Link></li>
+                                <li><Link className={getActiveClass("/users")} href="/users">Users</Link></li>
                             </ul>
                         </div>
                         <a className="btn btn-ghost text-xl">NextLerner</a>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
-                            <li><Link href="/">Home</Link></li>
-                            <li><Link href="/about">About</Link></li>
-                            <li><Link href="/contact">Contact</Link></li>
-                            <li><Link href="/about/developer">Developer</Link></li>
-                            <li><Link href="/blogs">Blogs</Link></li>
-                            <li><Link href="/dashboard">Dashboard</Link></li>
-                            <li><Link href="/users">Users</Link></li>
+                            <li><Link className={getActiveClass("/")} href="/">Home</Link></li>
+                            <li><Link className={getActiveClass("/about")} href="/about">About</Link></li>
+                            <li><Link className={getActiveClass("/contact")} href="/contact">Contact</Link></li>
+                            <li><Link className={getActiveClass("/about/developer")} href="/about/developer">Developer</Link></li>
+                            <li><Link className={getActiveClass("/blogs")} href="/blogs">Blogs</Link></li>
+                            <li><Link className={getActiveClass("/dashboard")} href="/dashboard">Dashboard</Link></li>
+                            <li><Link className={getActiveClass("/users")} href="/users">Users</Link></li>
 
 
 
