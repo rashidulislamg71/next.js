@@ -4,15 +4,18 @@ import { usePathname } from 'next/navigation'
 import React from 'react'
 function NavBar() {
 
-    const pathName = usePathname();
+    const pathName = usePathname(); 
+    
+
     const getActiveClass = (path) => {
         return pathName === path ? "text-blue-600 font-bold" : "";
     };
+
     return (
         <div>
             <nav className="bg-gray-800 text-white  p-4">
                 <div className="navbar shadow-sm">
-                    <div className="navbar-start">
+                    <div  className="navbar-start">
                         <div className="dropdown">
                             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
@@ -40,6 +43,8 @@ function NavBar() {
                             <li><Link className={getActiveClass("/blogs")} href="/blogs">Blogs</Link></li>
                             <li><Link className={getActiveClass("/dashboard")} href="/dashboard">Dashboard</Link></li>
                             <li><Link className={getActiveClass("/users")} href="/users">Users</Link></li>
+                            <li><Link className={getActiveClass("/foods")} href="/foods">Foods</Link></li>
+                         
 
 
 
